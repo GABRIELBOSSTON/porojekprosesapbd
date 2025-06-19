@@ -1,0 +1,285 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Informasi - Kabupaten Bekasi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            min-height: 100vh;
+            background-color: #d3e3e1;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: clamp(60px, 8vw, 100px);
+            background: rgba(235, 235, 235, 0);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 clamp(10px, 2vw, 20px);
+            z-index: 1000;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        nav.hovered {
+            background: rgba(235, 235, 235, 0.8);
+        }
+
+        nav.fade-out {
+            background: rgba(235, 235, 235, 0);
+            transition: background-color 1s ease-in-out;
+        }
+
+        .logo-container {
+            margin-right: auto;
+            margin-left: clamp(10px, 2vw, 20px);
+            display: flex;
+            align-items: center;
+            height: clamp(50px, 10vw, 150px);
+        }
+
+        .logo-container img {
+            max-height: 100%;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: clamp(15px, 2vw, 30px);
+            align-items: center;
+            margin-right: 5%;
+        }
+
+        nav a {
+            position: relative;
+            color: #1a3c5e;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 10px 15px;
+            border-radius: 6px;
+            font-size: clamp(14px, 1.2vw, 18px);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            outline: none;
+            text-transform: uppercase;
+        }
+
+        nav a i {
+            font-size: 1rem;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            left: 15%;
+            right: 15%;
+            bottom: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #1a3c5e 0%, #00c4cc 100%);
+            border-radius: 2px;
+            transform: scaleX(0);
+            transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+            z-index: 1;
+        }
+
+        nav a:hover,
+        nav a:focus {
+            color: #00c4cc;
+            transform: translateY(-2px);
+            background: rgba(26, 60, 94, 0.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a:hover::after,
+        nav a:focus::after {
+            transform: scaleX(1);
+        }
+
+        .hamburger {
+            display: none;
+            font-size: clamp(24px, 2.5vw, 30px);
+            cursor: pointer;
+            color: #1a3c5e;
+            padding: 0.5vw;
+            background: none;
+            border: none;
+        }
+
+        .content {
+            padding-top: clamp(60px, 8vw, 100px);
+            text-align: center;
+        }
+
+        .content img {
+            width: 100vw;
+            height: auto;
+            display: block;
+            margin: 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .content img:hover {
+            transform: scale(1.02);
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                height: clamp(50px, 8vw, 70px);
+                padding: 10px;
+            }
+
+            .logo-container {
+                height: clamp(40px, 5vw, 60px);
+                margin-left: 10px;
+            }
+
+            .hamburger {
+                display: block;
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: fixed;
+                top: clamp(50px, 8vw, 70px);
+                left: 0;
+                right: 0;
+                background: rgba(235, 235, 235, 0.95);
+                padding: 20px;
+                margin-right: 0;
+                align-items: center;
+                min-height: calc(100vh - clamp(50px, 8vw, 70px));
+                transition: all 0.3s ease-in-out;
+                z-index: 999;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            nav a {
+                margin: 10px 0;
+                font-size: clamp(16px, 3vw, 20px);
+                text-align: center;
+                width: 100%;
+                padding: 12px;
+                border-radius: 12px;
+            }
+
+            .content img {
+                width: 100vw;
+                box-shadow: none;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .content img {
+                width: 100vw;
+                max-width: 900px;
+                margin: 0 auto;
+            }
+        }
+
+        @media (min-width: 1025px) {
+            .content img {
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+        }
+
+        @media (max-width: 400px) {
+            nav a {
+                font-size: clamp(14px, 2.8vw, 16px);
+                margin: 8px 0;
+            }
+
+            .logo-container {
+                height: clamp(30px, 4vw, 50px);
+                margin-left: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav role="navigation" aria-label="Main navigation">
+        <div class="logo-container">
+            <img src="{% static 'image/logopemda.png' %}" alt="Logo Pemda">
+        </div>
+        <button class="hamburger" onclick="toggleMenu()" tabindex="0" onkeypress="if(event.key === 'Enter') toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-links">
+            <a href="{% url 'index' %}"><i class="fas fa-home"></i> Kembali ke Halaman Utama</a>
+        </div>
+    </nav>
+    <div class="content">
+        <img src="{% static 'image/informasi1.png' %}" alt="Poster Informasi 1">
+        <img src="{% static 'image/informasi2.png' %}" alt="Poster Informasi 2">
+        <img src="{% static 'image/informasi3.png' %}" alt="Poster Informasi 3">
+        <img src="{% static 'image/informasi4.png' %}" alt="Poster Informasi 4">
+        <img src="{% static 'image/informasi5.png' %}" alt="Poster Informasi 5">
+    </div>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            const hamburger = document.querySelector('.hamburger i');
+            if (navLinks && hamburger) {
+                navLinks.classList.toggle('active');
+                hamburger.classList.toggle('fa-bars');
+                hamburger.classList.toggle('fa-times');
+            }
+        }
+
+        const nav = document.querySelector('nav');
+        let timeoutId;
+
+        nav.addEventListener('mouseenter', () => {
+            clearTimeout(timeoutId);
+            nav.classList.remove('fade-out');
+            nav.classList.add('hovered');
+        });
+
+        nav.addEventListener('mouseleave', () => {
+            timeoutId = setTimeout(() => {
+                nav.classList.remove('hovered');
+                nav.classList.add('fade-out');
+            }, 1000);
+        });
+
+        window.addEventListener('resize', () => {
+            const navLinks = document.querySelector('.nav-links');
+            if (window.innerWidth > 768 && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                document.querySelector('.hamburger i').classList.remove('fa-times');
+                document.querySelector('.hamburger i').classList.add('fa-bars');
+            }
+        });
+    </script>
+</body>
+</html>

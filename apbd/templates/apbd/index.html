@@ -1,0 +1,146 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fixed Navigation Bar dengan Logo dan Gambar Latar Belakang</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;400&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+</head>
+<body>
+    <img src="{% static 'image/background.png' %}" alt="Background Image" class="background-img" />
+    <section class="section-second" aria-label="Bagian kedua">
+        <img src="{% static 'image/backgroundimage.png' %}" alt="Second Background Image" class="second-bg-img" />
+        {% if news_list %}
+            <div class="news-container">
+                {% for news in news_list %}
+                    <div class="news-item">
+                        <div class="news-img-wrap">
+                            <img class="news-img" src="{{ news.image.url }}" alt="{{ news.title }}">
+                        </div>
+                        <div class="news-content">
+                            <a href="{{ news.link }}" class="news-title">{{ news.title }}</a>
+                            <div class="news-meta-box">
+                                <span class="news-meta">{{ news.content }}</span>
+                                <span class="news-date">{{ news.date|timesince }} lalu</span>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+        {% if anggaran_list %}
+            <div class="anggaran-container">
+                {% for anggaran in anggaran_list %}
+                    <div class="anggaran-item">
+                        <h3>{{ anggaran.sektor }} (Tahun {{ anggaran.tahun }})</h3>
+                        <p class="alokasi">Alokasi: Rp {{ anggaran.alokasi|floatformat:2 }}</p>
+                        <p>Deskripsi: {{ anggaran.deskripsi|default:"Tidak ada deskripsi" }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </section>
+    <nav role="navigation" aria-label="Main navigation">
+        <div class="logo-container">
+            <img src="{% static 'image/logopemda.png' %}" alt="Logo Pemda" />
+        </div>
+        <button class="hamburger" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-links">
+            <a href="{% url 'informasi' %}"><i class="fas fa-info-circle"></i> Informasi</a>
+            <a href="{% url 'unduh' %}"><i class="fas fa-download"></i> Unduh Dokumen</a>
+            <a href="/admin/"><i class="fas fa-user"></i> Akun</a>
+            <a href="http://localhost:5000" onclick="openChatModal()"><i class="fas fa-comment"></i> Chat</a>
+            <a href="{% url 'faq' %}"><i class="fas fa-question-circle"></i> FAQ</a>
+        </div>
+    </nav>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            const hamburger = document.querySelector('.hamburger i');
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('fa-bars');
+            hamburger.classList.toggle('fa-times');
+        }
+
+        const nav = document.querySelector('nav');
+        let timeoutId;
+
+        nav.addEventListener('mouseenter', () => {
+            clearTimeout(timeoutId);
+            nav.classList.remove('fade-out');
+            nav.classList.add('hovered');
+        });
+
+        nav.addEventListener('mouseleave', () => {
+            timeoutId = setTimeout(() => {
+                nav.classList.remove('hovered');
+                nav.classList.add('fade-out');
+            }, 1000);
+        });
+
+        window.addEventListener('resize', () => {
+            const navLinks = document.querySelector('.nav-links');
+            if (window.innerWidth > 768 && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                document.querySelector('.hamburger i').classList.remove('fa-times');
+                document.querySelector('.hamburger i').classList.add('fa-bars');
+            }
+        });
+
+        // Chatbot Modal Functions
+        function openChatModal() {
+            document.getElementById('chatModal').style.display = 'block';
+        }
+
+        function closeChatModal() {
+            document.getElementById('chatModal').style.display = 'none';
+        }
+
+        async function sendMessage() {
+            const input = document.getElementById('chatInput');
+            const output = document.getElementById('chatOutput');
+            const message = input.value.trim();
+            if (!message) return;
+
+            // Tampilkan pesan pengguna
+            output.innerHTML += `<p><strong>Kamu:</strong> ${message}</p>`;
+            input.value = '';
+
+            // Panggil API xAI Grok (ganti dengan API key dan endpoint yang sesuai)
+            try {
+                const response = await fetch('https://api.x.ai/grok/chat', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': 'Bearer YOUR_API_KEY_HERE' // Ganti dengan API key
+                    },
+                    body: JSON.stringify({ message: message })
+                });
+
+                const data = await response.json();
+                const botReply = data.reply || 'Maaf, saya tidak mengerti. Coba lagi!';
+                output.innerHTML += `<p><strong>Bot:</strong> ${botReply}</p>`;
+            } catch (error) {
+                output.innerHTML += `<p><strong>Bot:</strong> Error: Tidak bisa terhubung ke server.</p>`;
+            }
+
+            output.scrollTop = output.scrollHeight; // Auto-scroll ke bawah
+        }
+
+        // Tutup modal saat klik di luar
+        window.onclick = function(event) {
+            const modal = document.getElementById('chatModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,350 @@
+:root {
+    --cnbc-bg: #f4f6f8;
+    --cnbc-white: #fff;
+    --cnbc-border: #e0e6ea;
+    --cnbc-title: #0057a5;
+    --cnbc-title-hover: #ffc600;
+    --cnbc-gray-text: #5a6a85;
+    --cnbc-light-shadow: 0 2px 12px rgba(0, 87, 165, 0.1);
+    --cnbc-meta-bg: #f5f8fb;
+    --cnbc-date: #b2b9c6;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: var(--cnbc-bg);
+    margin: 0;
+    padding: 0;
+}
+
+.background-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.section-second {
+    width: 100%;
+    background-color: transparent;
+}
+
+.second-bg-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.news-container {
+    max-width: 1200px; /* Lebar maksimum lebih besar untuk desktop */
+    margin: 80px auto 0 auto; /* Margin atas lebih besar untuk ruang */
+    background: var(--cnbc-white);
+    border-radius: 20px;
+    box-shadow: var(--cnbc-light-shadow);
+    overflow: hidden;
+    padding: 30px 40px; /* Padding lebih besar untuk kesan luas */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 kolom */
+    gap: 30px 40px; /* Jarak vertikal 30px, horizontal 40px */
+}
+
+.news-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px; /* Jarak antara gambar dan konten lebih besar */
+    padding: 15px; /* Padding internal untuk setiap item */
+    background: rgba(255, 255, 255, 0.95); /* Latar sedikit transparan untuk efek */
+    border: 1px solid var(--cnbc-border);
+    border-radius: 12px; /* Sudut membulat lebih lembut */
+    transition: box-shadow 0.3s ease; /* Efek hover */
+}
+
+.news-item:hover {
+    box-shadow: 0 4px 15px rgba(0, 87, 165, 0.15); /* Bayangan saat hover */
+}
+
+.news-img-wrap {
+    width: 150px; /* Ukuran gambar lebih besar di desktop */
+    height: 150px;
+    min-width: 150px;
+    min-height: 150px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #f0f0f0;
+    border: 1px solid #e0e6ea;
+    box-shadow: 0 2px 8px rgba(0, 87, 165, 0.08);
+    display: flex;
+    align-items: center; /* Pusatkan gambar */
+    justify-content: center;
+}
+
+.news-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    background: #f0f0f0;
+}
+
+.news-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+}
+
+.news-title {
+    font-size: 1.3em; /* Ukuran font lebih besar di desktop */
+    font-weight: 700;
+    margin-bottom: 10px;
+    margin-top: 0;
+    color: var(--cnbc-title);
+    line-height: 1.4;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    letter-spacing: 0.2px;
+    word-break: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Batasi 2 baris */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.news-title:hover,
+.news-title:focus {
+    color: var(--cnbc-title-hover);
+    text-decoration: underline;
+    outline: none;
+}
+
+.news-meta-box {
+    background: var(--cnbc-meta-bg);
+    border-radius: 8px;
+    padding: 10px 15px;
+    display: inline-block;
+    box-shadow: 0 1px 4px rgba(0, 87, 165, 0.05);
+    margin-top: 5px;
+    min-width: 100px;
+}
+
+.news-meta {
+    font-size: 1.1em;
+    color: var(--cnbc-gray-text);
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    display: block;
+    line-height: 1.4;
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+
+.news-date {
+    font-size: 1em;
+    color: var(--cnbc-date);
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    display: block;
+    margin-left: 1px;
+    margin-top: 0;
+}
+
+.anggaran-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 25px;
+    background: var(--cnbc-white);
+    border-radius: 18px;
+    border: 1.5px solid var(--cnbc-border);
+    box-shadow: var(--cnbc-light-shadow);
+}
+
+.anggaran-item {
+    margin-bottom: 20px;
+}
+
+/* Media Query untuk Responsivitas */
+@media (max-width: 600px) {
+    .news-container {
+        max-width: 100%;
+        margin: 18px 2px;
+        border-radius: 12px;
+        padding: 10px 0;
+        grid-template-columns: 1fr; /* Kembali ke 1 kolom di mobile */
+        gap: 15px;
+    }
+    .news-item {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 10px;
+        gap: 15px;
+    }
+    .news-img-wrap {
+        width: 100%;
+        height: 160px;
+        min-width: unset;
+        min-height: unset;
+        border-radius: 8px;
+    }
+    .news-meta-box {
+        padding: 8px 12px;
+    }
+    .news-title {
+        font-size: 1.1em;
+        -webkit-line-clamp: 3; /* Tambah baris di mobile */
+    }
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: clamp(60px, 8vw, 100px);
+    background: rgba(235, 235, 235, 0);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 clamp(10px, 2vw, 20px);
+    z-index: 1000;
+    transition: background-color 0.3s ease-in-out;
+}
+
+nav.hovered {
+    background: rgba(235, 235, 235, 0.8);
+}
+
+nav.fade-out {
+    background: rgba(235, 235, 235, 0);
+    transition: background-color 1s ease-in-out;
+}
+
+.logo-container {
+    margin-right: auto;
+    margin-left: clamp(10px, 2vw, 20px);
+    display: flex;
+    align-items: center;
+    height: clamp(50px, 10vw, 150px);
+}
+
+.logo-container img {
+    max-height: 100%;
+    width: auto;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    gap: clamp(15px, 2vw, 30px);
+    align-items: center;
+    margin-right: 5%;
+}
+
+nav a {
+    position: relative;
+    color: #1a3c5e;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-size: clamp(14px, 1.2vw, 18px);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    outline: none;
+    text-transform: uppercase;
+}
+
+nav a i {
+    font-size: 1rem;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    left: 15%;
+    right: 15%;
+    bottom: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #1a3c5e 0%, #00c4cc 100%);
+    border-radius: 2px;
+    transform: scaleX(0);
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    z-index: 1;
+}
+
+nav a:hover,
+nav a:focus {
+    color: #00c4cc;
+    transform: translateY(-2px);
+    background: rgba(26, 60, 94, 0.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav a:hover::after,
+nav a:focus::after {
+    transform: scaleX(1);
+}
+
+.hamburger {
+    display: none;
+    font-size: clamp(24px, 2.5vw, 30px);
+    cursor: pointer;
+    color: #1a3c5e;
+    padding: 0.5vw;
+    z-index: 1001;
+    background: none;
+    border: none;
+}
+
+@media (max-width: 768px) {
+    nav {
+        height: clamp(50px, 8vw, 70px);
+        padding: 10px;
+        flex-direction: row;
+        align-items: center;
+    }
+    .logo-container {
+        height: clamp(40px, 5vw, 60px);
+        margin-left: 10px;
+    }
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: clamp(50px, 8vw, 70px);
+        left: 0;
+        right: 0;
+        background: rgba(235, 235, 235, 0.95);
+        padding: 20px;
+        margin-right: 0;
+        align-items: center;
+        min-height: calc(100vh - clamp(50px, 8vw, 70px));
+        transition: all 0.3s ease-in-out;
+        z-index: 999;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    nav a {
+        margin: 10px 0;
+        font-size: clamp(16px, 3vw, 20px);
+        text-align: center;
+        width: 100%;
+        padding: 12px;
+        border-radius: 12px;
+    }
+}

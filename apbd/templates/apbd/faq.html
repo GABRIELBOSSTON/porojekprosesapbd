@@ -1,0 +1,573 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FAQ - APBD Kabupaten Bekasi</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- AOS CSS for animation -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      background: #f6f9fc;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .faq-section {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 15px;
+    }
+    .faq-title {
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #2e7d32;
+    }
+    .accordion-button:not(.collapsed) {
+      color: #2e7d32;
+      background-color: #e9f1fb;
+      box-shadow: none;
+    }
+    .accordion-button:focus {
+      box-shadow: 0 0 0 0.2rem #81b3f4;
+    }
+    .accordion-item {
+      border-radius: 8px !important;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 8px rgba(34, 51, 106, 0.05);
+      overflow: hidden;
+    }
+    .accordion-body {
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <section class="faq-section">
+    <h2 class="faq-title">Frequently Asked Questions - APBD Kabupaten Bekasi</h2>
+    <div class="accordion" id="faqAccordion">
+
+      <!-- Penjelasan Aplikasi -->
+      <div class="accordion-item" data-aos="fade-up">
+        <h2 class="accordion-header" id="faq1">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1" tabindex="0" onkeypress="if(event.key === 'Enter') this.click()">
+            Apa itu Sistem Smart Planning & Budgeting?
+          </button>
+        </h2>
+        <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="faq1" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Sistem Smart Planning & Budgeting (SPB) adalah aplikasi web penyajian data dan analisa yang bersifat terbuka untuk publik dengan platform interaktif dan user-friendly untuk mengeksplorasi dan mendalami Anggaran Pendapatan dan Belanja Daerah (APBD) Kabupaten Bekasi. Sistem SPB dibangun untuk mengakomodasi proses perencanaan dan penganggaran di lingkungan Pemerintah Kabupaten Bekasi, sekaligus menyempurnakan sistem e-budgeting yang telah digunakan sebelumnya.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up" data-aos-delay="100">
+        <h2 class="accordion-header" id="faq2">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2" tabindex="0" onkeypress="if(event.key === 'Enter') this.click()">
+            Apa perbedaan Sistem SPB dengan aplikasi e-budgeting sebelumnya?
+          </button>
+        </h2>
+        <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Sistem SPB menyeimbangkan proses perencanaan dan penganggaran dengan model pengembangan terintegrasi pada tingkatan Tim Anggaran Pemerintah Daerah (TAPD). Aplikasi ini merupakan hasil kerja sama Bappeda, BPKD, dan Diskominfotik Kabupaten Bekasi, dikembangkan dengan sistem keahlian dan disajikan dalam satu portal APBD terintegrasi. SPB memperkenalkan konsep 5 SMART: Smart Governance, Smart Input, Smart Processing, Smart Connecting, dan Smart Monitoring.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
+        <h2 class="accordion-header" id="faq3">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3" tabindex="0" onkeypress="if(event.key === 'Enter') this.click()">
+            Apa definisi konsep 5 SMART?
+          </button>
+        </h2>
+        <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            <ul>
+              <li><strong>Smart Governance</strong>: Penyempurnaan tata kelola pengembangan aplikasi.</li>
+              <li><strong>Smart Input</strong>: Peningkatan kecerdasan aplikasi dalam menerima input data.</li>
+              <li><strong>Smart Processing</strong>: Peningkatan dalam proses supervisi, validasi, dan analisa data.</li>
+              <li><strong>Smart Connecting</strong>: Peningkatan jangkauan dan interaksi dengan publik.</li>
+              <li><strong>Smart Monitoring</strong>: Peningkatan pada model penyajian dan pelaporan data.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up" data-aos-delay="300">
+        <h2 class="accordion-header" id="faq4">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4" tabindex="0" onkeypress="if(event.key === 'Enter') this.click()">
+            Kapan Sistem SPB mulai digunakan?
+          </button>
+        </h2>
+        <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="faq4" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Sistem SPB mulai digunakan sejak Februari 2020 untuk mengakomodasi proses pergeseran dan perubahan anggaran APBD 2020. Sistem ini juga digunakan untuk mengawal proses perencanaan APBD Tahun Anggaran 2021 di Kabupaten Bekasi.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up" data-aos-delay="400">
+        <h2 class="accordion-header" id="faq5">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5" tabindex="0" onkeypress="if(event.key === 'Enter') this.click()">
+            Mengapa baru sekarang resmi diluncurkan?
+          </button>
+        </h2>
+        <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="faq5" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Proses perencanaan APBD 2021 mengalami perubahan regulasi dari Kementerian Dalam Negeri, sehingga memerlukan penyesuaian sistem. Kondisi pandemi COVID-19 juga menyebabkan pergeseran jadwal. Setelah testing kesiapan sistem, SPB diluncurkan ke publik setelah penetapan Dokumen KUA PPAS 2021 pada November 2020. Semua dokumen publik sebelumnya juga telah dipublikasikan melalui portal PPID Kabupaten Bekasi.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up" data-aos-delay="500">
+        <h2 class="accordion-header" id="faq6">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6" tabindex="0" onkeypress="if(event.key === 'Enter') this.click()">
+            Apakah Sistem SPB memenuhi UU Keterbukaan Informasi Publik (KIP)?
+          </button>
+        </h2>
+        <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="faq6" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Ya, Pemkab Bekasi memastikan bahwa semua tahapan perencanaan hingga penetapan APBD telah melampaui kewajiban Badan Publik sesuai UU No. 14 Tahun 2008 tentang Keterbukaan Informasi Publik. SPB menyediakan platform interaktif dan user-friendly untuk publik mengeksplorasi informasi APBD Kabupaten Bekasi.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up" data-aos-delay="600">
+        <h2 class="accordion-header" id="faq7">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7" tabindex="0" onkeypress="if(event.key === 'Enter') this.click()">
+            Bagaimana mempelajari proses dan tahapan APBD?
+          </button>
+        </h2>
+        <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="faq7" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Sistem SPB dirancang untuk meningkatkan literasi anggaran masyarakat. Anda dapat mempelajari tahapan APBD melalui infografis kebijakan penyusunan APBD yang tersedia di menu Informasi pada portal SPB.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up" data-aos-delay="700">
+        <h2 class="accordion-header" id="faq8">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8" tabindex="0" onkeypress="if(event.key === 'Enter') this.click()">
+            Bagaimana memahami menu, istilah, dan tahapan di Sistem SPB?
+          </button>
+        </h2>
+        <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="faq8" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Anda dapat mempelajari menu, istilah, dan fitur SPB melalui video tutorial yang tersedia di portal SPB atau dengan mengunduh Dokumen Panduan Penggunaan Aplikasi dari menu yang disediakan.
+          </div>
+        </div>
+      </div>
+
+      <!-- Manfaat Langsung -->
+      <div class="accordion-item" data-aos="fade-up" data-aos-delay="800">
+        <h2 class="accordion-header" id="faq9">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9" tabindex="0" onkeypress="if(event.key === 'Enter') this.click()">
+            Apa kemudahan yang didapat masyarakat dari SPB?
+          </button>
+        </h2>
+        <div id="collapse9" class="accordion-collapse collapse" aria-labelledby="faq9" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            SPB menyajikan semua informasi APBD dalam satu portal, termasuk data, dokumen, infografis, dan link aplikasi. Publik dapat mendaftar akun untuk berinteraksi langsung dan mendapatkan informasi lebih detail tanpa perlu mencari dari sumber terpisah.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up" data-aos-delay="900">
+        <h2 class="accordion-header" id="faq10">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapse10" tabindex="0" onkeypress="if(event.key === 'Enter') this.click()">
+            Di mana bisa mengunduh dokumen APBD?
+          </button>
+        </h2>
+        <div id="collapse10" class="accordion-collapse collapse" aria-labelledby="faq10" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Koleksi dokumen publik APBD, dari awal penyusunan hingga proses akhir, tersedia di menu Dokumen Publik pada portal SPB.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up" data-aos-delay="1000">
+        <h2 class="accordion-header" id="faq11">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse11" aria-expanded="false" aria-controls="collapse11" tabindex="0" onkeypress="if(event.key === 'Enter') this.click()">
+            Mengapa informasi tidak sampai detail belanja?
+          </button>
+        </h2>
+        <div id="collapse11" class="accordion-collapse collapse" aria-labelledby="faq11" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Dokumen yang dipublikasikan mengikuti acuan hukum dari Kementerian Dalam Negeri, di mana dokumen RKPD hanya sampai level kegiatan dan KUA PPAS hingga kode rekening. Informasi lebih detail mungkin tersedia pada tahapan tertentu dengan login akun.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up" data-aos-delay="1100">
+        <h2 class="accordion-header" id="faq12">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse12" aria-expanded="false" aria-controls="collapse12" tabindex="0" onkeypress="if(event.key === 'Enter') this.click()">
+            Bisakah mengakses data lebih detail?
+          </button>
+        </h2>
+        <div id="collapse12" class="accordion-collapse collapse" aria-labelledby="faq12" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Untuk informasi detail hingga komponen belanja, Anda perlu mendaftar akun di SPB. Untuk kebutuhan riset, permintaan informasi detail dapat diajukan melalui PPID Kabupaten Bekasi.
+          </div>
+        </div>
+      </div>
+
+      <!-- Akun -->
+      <div class="accordion-item" data-aos="fade-up" data-aos-delay="1200">
+        <h2 class="accordion-header" id="faq13">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse13" aria-expanded="false" aria-controls="collapse13" tabindex="0" onkeypress="if(event.key === 'Enter') this.click()">
+            Apa itu Akun Bekasi?
+          </button>
+        </h2>
+        <div id="collapse13" class="accordion-collapse collapse" aria-labelledby="faq13" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Akun Bekasi adalah sistem single sign-on untuk mengelola akses lintas aplikasi Pemkab Bekasi. Berlaku untuk ASN, warga Bekasi, warga non-Bekasi, dan warga asing yang mendaftar.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up" data-aos-delay="1300">
+        <h2 class="accordion-header" id="faq14">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse14" aria-expanded="false" aria-controls="collapse14" tabindex="0" onkeypress="if(event.key === 'Enter') this.click()">
+            Mengapa harus mendaftar akun?
+          </button>
+        </h2>
+        <div id="collapse14" class="accordion-collapse collapse" aria-labelledby="faq14" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Akun memberikan akses lebih luas ke aplikasi Pemkab Bekasi dengan login tunggal, menyederhanakan interaksi tanpa perlu login berulang. Akun memperluas akses data, bukan membatasinya.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up" data-aos-delay="1400">
+        <h2 class="accordion-header" id="faq15">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse15" aria-expanded="false" aria-controls="collapse15" tabindex="0" onkeypress="if(event.key === 'Enter') this.click()">
+            Mengapa harus mengisi KK dan NIK?
+          </button>
+        </h2>
+        <div id="collapse15" class="accordion-collapse collapse" aria-labelledby="faq15" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Pendaftaran akun divalidasi oleh Dinas Kependudukan dan Catatan Sipil Kabupaten Bekasi untuk keamanan. KK dan NIK mencegah penyalahgunaan data dan memenuhi prinsip digital citizenship sesuai UU No. 25 tentang Pelayanan Publik.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up" data-aos-delay="1500">
+        <h2 class="accordion-header" id="faq16">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse16" aria-expanded="false" aria-controls="collapse16" tabindex="0" onkeypress="if(event.key === 'Enter') this.click()">
+            Apakah warga non-Bekasi bisa mendaftar?
+          </button>
+        </h2>
+        <div id="collapse16" class="accordion-collapse collapse" aria-labelledby="faq16" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Ya, warga non-Bekasi dan warga asing dapat mendaftar dengan mengisi formulir lengkap yang disediakan di portal SPB.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up" data-aos-delay="1600">
+        <h2 class="accordion-header" id="faq17">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse17" aria-expanded="false" aria-controls="collapse17" tabindex="0" onkeypress="if(event.key === 'Enter') this.click()">
+            Apakah ASN harus mendaftar sebagai warga?
+          </button>
+        </h2>
+        <div id="collapse17" class="accordion-collapse collapse" aria-labelledby="faq17" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Tidak, ASN Kabupaten Bekasi dapat memilih kategori ASN saat mendaftar, dan datanya divalidasi melalui sistem informasi kepegawaian, bukan sistem kependudukan.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up" data-aos-delay="1700">
+        <h2 class="accordion-header" id="faq18">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse18" aria-expanded="false" aria-controls="collapse18" tabindex="0" onkeypress="if(event.key === 'Enter') this.click()">
+            Bisakah login tanpa NIK?
+          </button>
+        </h2>
+        <div id="collapse18" class="accordion-collapse collapse" aria-labelledby="faq18" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Ya, Anda dapat login menggunakan username atau email yang didaftarkan, selain dengan NIK.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up" data-aos-delay="1800">
+        <h2 class="accordion-header" id="faq19">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse19" aria-expanded="false" aria-controls="collapse19" tabindex="0" onkeypress="if(event.key === 'Enter') this.click()">
+            Bagaimana jika lupa password?
+          </button>
+        </h2>
+        <div id="collapse19" class="accordion-collapse collapse" aria-labelledby="faq19" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Gunakan fitur "Lupa Password" di halaman login, masukkan email terdaftar, dan ikuti link reset password yang dikirim ke email Anda.
+          </div>
+        </div>
+      </div>
+
+      <!-- Dashboard -->
+      <div class="accordion-item" data-aos="fade-up" data-aos-delay="1900">
+        <h2 class="accordion-header" id="faq20">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse20" aria-expanded="false" aria-controls="collapse20" tabindex="0" onkeypress="if(event.key === 'Enter') this.click()">
+            Apa itu dashboard?
+          </button>
+        </h2>
+        <div id="collapse20" class="accordion-collapse collapse" aria-labelledby="faq20" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Dashboard adalah tampilan grafik interaktif yang menampilkan rekap data penting APBD secara cepat dan mudah dipahami oleh pengguna.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up" data-aos-delay="2000">
+        <h2 class="accordion-header" id="faq21">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse21" aria-expanded="false" aria-controls="collapse21" tabindex="0" onkeypress="if(event.key === 'Enter') this.click()">
+            Data apa yang ditampilkan di dashboard?
+          </button>
+        </h2>
+        <div id="collapse21" class="accordion-collapse collapse" aria-labelledby="faq21" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Dashboard menampilkan data APBD dan realisasi selama 10 tahun terakhir berdasarkan data yang telah diaudit oleh Badan Pemeriksa Keuangan (BPK). Anda dapat menyaring data menggunakan filter dan grafik yang tersedia.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up" data-aos-delay="2100">
+        <h2 class="accordion-header" id="faq22">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse22" aria-expanded="false" aria-controls="collapse22" tabindex="0" onkeypress="if(event.key === 'Enter') this.click()">
+            Mengapa data hanya sampai tahun 2019?
+          </button>
+        </h2>
+        <div id="collapse22" class="accordion-collapse collapse" aria-labelledby="faq22" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Data yang ditampilkan adalah data yang telah diaudit BPK. Karena audit dilakukan setelah tahun anggaran berakhir, data APBD 2020 belum tersedia pada saat ini.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up" data-aos-delay="2200">
+        <h2 class="accordion-header" id="faq23">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse23" aria-expanded="false" aria-controls="collapse23" tabindex="0" onkeypress="if(event.key === 'Enter') this.click()">
+            Bisakah memilih tampilan grafik?
+          </button>
+        </h2>
+        <div id="collapse23" class="accordion-collapse collapse" aria-labelledby="faq23" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Ya, Anda dapat memilih tampilan grafik batang, garis, atau pie sesuai kebutuhan untuk memudahkan pemahaman data.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up" data-aos-delay="2300">
+        <h2 class="accordion-header" id="faq24">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse24" aria-expanded="false" aria-controls="collapse24" tabindex="0" onkeypress="if(event.key === 'Enter') this.click()">
+            Bisakah mengunduh data dari grafik?
+          </button>
+        </h2>
+        <div id="collapse24" class="accordion-collapse collapse" aria-labelledby="faq24" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Ya, data yang difilter dapat diunduh dalam format XLS, CSV, atau tabel. Anda juga dapat menyalin dalam format vektor/gambar atau mencetak langsung dari menu detail dashboard.
+          </div>
+        </div>
+      </div>
+
+      <!-- Pantau Anggaran -->
+      <div class="accordion-item" data-aos="fade-up" data-aos-delay="2400">
+        <h2 class="accordion-header" id="faq25">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse25" aria-expanded="false" aria-controls="collapse25" tabindex="0" onkeypress="if(event.key === 'Enter') this.click()">
+            Apa itu Pantau Anggaran?
+          </button>
+        </h2>
+        <div id="collapse25" class="accordion-collapse collapse" aria-labelledby="faq25" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Pantau Anggaran adalah fitur untuk melihat detail program, kegiatan, dan rincian anggaran setiap SKPD sesuai tahapan yang diakses. Anda dapat mencari data dan meneliti informasi anggaran sesuai level.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up" data-aos-delay="2500">
+        <h2 class="accordion-header" id="faq26">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse26" aria-expanded="false" aria-controls="collapse26" tabindex="0" onkeypress="if(event.key === 'Enter') this.click()">
+            Data apa saja yang ditampilkan di Pantau Anggaran?
+          </button>
+        </h2>
+        <div id="collapse26" class="accordion-collapse collapse" aria-labelledby="faq26" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Informasi mulai dari urusan, program, kegiatan, sub-kegiatan, hingga kode rekening. Pada tahapan tertentu, informasi hingga komponen belanja juga tersedia.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up" data-aos-delay="2600">
+        <h2 class="accordion-header" id="faq27">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse27" aria-expanded="false" aria-controls="collapse27" tabindex="0" onkeypress="if(event.key === 'Enter') this.click()">
+            Bagaimana mengakses data di bawah tahun 2018?
+          </button>
+        </h2>
+        <div id="collapse27" class="accordion-collapse collapse" aria-labelledby="faq27" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Data SPB menampilkan informasi mulai tahun 2018-2021 sesuai struktur Permendagri terbaru. Data sebelum 2018 memiliki struktur berbeda, tetapi tetap dapat diakses melalui portal SPB.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up" data-aos-delay="2700">
+        <h2 class="accordion-header" id="faq28">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse28" aria-expanded="false" aria-controls="collapse28" tabindex="0" onkeypress="if(event.key === 'Enter') this.click()">
+            Mengapa harus login untuk Pantau Anggaran?
+          </button>
+        </h2>
+        <div id="collapse28" class="accordion-collapse collapse" aria-labelledby="faq28" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Data publik tersedia di menu Dokumen Publik tanpa login. Pantau Anggaran adalah fitur tambahan yang memerlukan login untuk pengelolaan data yang lebih tertata.
+          </div>
+        </div>
+      </div>
+
+      <!-- Pantau Aspirasi -->
+      <div class="accordion-item" data-aos="fade-up" data-aos-delay="2800">
+        <h2 class="accordion-header" id="faq29">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse29" aria-expanded="false" aria-controls="collapse29" tabindex="0" onkeypress="if(event.key === 'Enter') this.click()">
+            Apa itu Pantau Aspirasi?
+          </button>
+        </h2>
+        <div id="collapse29" class="accordion-collapse collapse" aria-labelledby="faq29" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Pantau Aspirasi adalah fitur untuk memantau perkembangan penyerapan aspirasi warga dalam kegiatan yang dianggarkan selama proses penyusunan/perubahan APBD.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up" data-aos-delay="2900">
+        <h2 class="accordion-header" id="faq30">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse30" aria-expanded="false" aria-controls="collapse30" tabindex="0" onkeypress="if(event.key === 'Enter') this.click()">
+            Data apa saja yang ditampilkan di Pantau Aspirasi?
+          </button>
+        </h2>
+        <div id="collapse30" class="accordion-collapse collapse" aria-labelledby="faq30" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Data penyerapan aspirasi dari Musrenbang, usulan langsung, dan reses, termasuk detail kegiatan, unit kerja, lokasi, dan nilai anggaran.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up" data-aos-delay="3000">
+        <h2 class="accordion-header" id="faq31">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse31" aria-expanded="false" aria-controls="collapse31" tabindex="0" onkeypress="if(event.key === 'Enter') this.click()">
+            Apa beda usulan Musrenbang, usulan langsung, dan reses?
+          </button>
+        </h2>
+        <div id="collapse31" class="accordion-collapse collapse" aria-labelledby="faq31" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            <ul>
+              <li><strong>Usulan Musrenbang</strong>: Usulan warga melalui forum Musyawarah Perencanaan Pembangunan dari tingkat RW hingga kecamatan.</li>
+              <li><strong>Usulan Langsung</strong>: Usulan warga yang tidak terfasilitasi Musrenbang.</li>
+              <li><strong>Reses</strong>: Usulan warga yang dikumpulkan melalui mekanisme reses anggota dewan.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up" data-aos-delay="3100">
+        <h2 class="accordion-header" id="faq32">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse32" aria-expanded="false" aria-controls="collapse32" tabindex="0" onkeypress="if(event.key === 'Enter') this.click()">
+            Bagaimana mengecek status aspirasi?
+          </button>
+        </h2>
+        <div id="collapse32" class="accordion-collapse collapse" aria-labelledby="faq32" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Cari aspirasi berdasarkan lokasi, unit kerja, atau kode tracking untuk melihat detail penyerapan, termasuk unit kerja tujuan, nama kegiatan, dan lokasi.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up" data-aos-delay="3200">
+        <h2 class="accordion-header" id="faq33">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse33" aria-expanded="false" aria-controls="collapse33" tabindex="0" onkeypress="if(event.key === 'Enter') this.click()">
+            Apakah aspirasi yang diterima langsung dilaksanakan?
+          </button>
+        </h2>
+        <div id="collapse33" class="accordion-collapse collapse" aria-labelledby="faq33" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Aspirasi yang diterima direncanakan untuk APBD tahun berikutnya dan dilaksanakan sesuai jadwal pelaksanaan APBD, bukan pada tahun yang sama.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up" data-aos-delay="3300">
+        <h2 class="accordion-header" id="faq34">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse34" aria-expanded="false" aria-controls="collapse34" tabindex="0" onkeypress="if(event.key === 'Enter') this.click()">
+            Bagaimana jika aspirasi ditolak atau kegiatannya dihapus?
+          </button>
+        </h2>
+        <div id="collapse34" class="accordion-collapse collapse" aria-labelledby="faq34" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Jika aspirasi ditolak atau belum diterima, Anda dapat mengusulkan kembali melalui aplikasi e-Musrenbang atau e-Reses pada tahun berikutnya.
+          </div>
+        </div>
+      </div>
+
+      <!-- Pertanyaan Lain -->
+      <div class="accordion-item" data-aos="fade-up" data-aos-delay="3400">
+        <h2 class="accordion-header" id="faq35">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse35" aria-expanded="false" aria-controls="collapse35" tabindex="0" onkeypress="if(event.key === 'Enter') this.click()">
+            Di mana saya bisa bertanya lebih lanjut?
+          </button>
+        </h2>
+        <div id="collapse35" class="accordion-collapse collapse" aria-labelledby="faq35" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Untuk informasi lebih lanjut tentang SPB, silakan hubungi kami melalui menu Hubungi pada portal SPB.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up" data-aos-delay="3500">
+        <h2 class="accordion-header" id="faq36">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse36" aria-expanded="false" aria-controls="collapse36" tabindex="0" onkeypress="if(event.key === 'Enter') this.click()">
+            Apakah ada panduan yang bisa dibaca?
+          </button>
+        </h2>
+        <div id="collapse36" class="accordion-collapse collapse" aria-labelledby="faq36" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Ya, panduan aplikasi dan registrasi akun tersedia di menu Dokumen Panduan pada portal SPB.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up" data-aos-delay="3600">
+        <h2 class="accordion-header" id="faq37">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse37" aria-expanded="false" aria-controls="collapse37" tabindex="0" onkeypress="if(event.key === 'Enter') this.click()">
+            Apakah boleh melakukan screen capture dan share?
+          </button>
+        </h2>
+        <div id="collapse37" class="accordion-collapse collapse" aria-labelledby="faq37" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Anda boleh melakukan screen capture, tetapi sertakan alamat link halaman yang di-capture untuk memastikan informasi dapat diverifikasi langsung di portal SPB.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item" data-aos="fade-up" data-aos-delay="3700">
+        <h2 class="accordion-header" id="faq38">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse38" aria-expanded="false" aria-controls="collapse38" tabindex="0" onkeypress="if(event.key === 'Enter') this.click()">
+            Apakah boleh mengulas aplikasi SPB di kanal saya?
+          </button>
+        </h2>
+        <div id="collapse38" class="accordion-collapse collapse" aria-labelledby="faq38" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Ya, Anda boleh mengulas aplikasi SPB secara objektif berdasarkan informasi yang tersedia. Untuk pertanyaan lebih lanjut, hubungi kami melalui menu Hubungi.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS JS for animation -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

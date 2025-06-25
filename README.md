@@ -1,3 +1,5 @@
+![alt text](https://github.com/GABRIELBOSSTON/porojekprosesapbd/blob/main/screenshots/Screenshot%202025-06-15%20173323.png?raw=true)
+
 ![alt text](https://github.com/GABRIELBOSSTON/porojekprosesapbd/blob/main/screenshots/Screenshot%202025-05-30%20033527.png?raw=true)
 
 # Proyek APBD Bekasi

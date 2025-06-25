@@ -1,3 +1,5 @@
+![alt text](?raw=true)
+
 # Proyek APBD Bekasi
 
 Ini adalah proyek aplikasi web berbasis Django yang didesain untuk menyediakan informasi transparan mengenai Anggaran Pendapatan dan Belanja Daerah (APBD) Kota Bekasi. Aplikasi ini bertujuan untuk memudahkan masyarakat dalam mengakses data anggaran, berita terkini, dan dokumen terkait APBD.
